@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+
+  pre_build:
+    commands:
+      - echo "Restoring dependencies..."
+      - dotnet restore HelloWorld.sln
+
+  build:
+    commands:
+      - echo "Building application..."
+      - dotnet build HelloWorld.sln --configuration Release --no-restore
+
+  post_build:
+    commands:
+      - echo "Running tests..."
+      - dotnet test HelloWorld.sln --configuration Release --no-build
+
+artifacts:
+  files:
+    - '**/*'
