@@ -16,6 +16,7 @@ public class HealthControllerTests
 
         // Assert
         var okResult = Assert.IsType<OkObjectResult>(result);
+        //var okResult = Assert.IsType<BadRequestObjectResult>(result);
 
         Assert.NotNull(okResult.Value);
     }
