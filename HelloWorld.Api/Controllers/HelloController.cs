@@ -13,7 +13,8 @@ public class HelloController : ControllerBase
         {
             message = "Hello from .NET",
             application = "HelloWorld.Api",
-            version = "1.0"
+            version = "1.0",
+            environment = "Development"
         });
     }
 }
