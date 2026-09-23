@@ -1,5 +1,9 @@
 trigger:
-- main
+  branches:
+    include:
+      - main
+      - development
+      - feature/*
 
 pool:
   name: 'Chandan-Windows'
